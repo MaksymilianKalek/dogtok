@@ -1,441 +1,569 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <title>Travel Agency</title>
-    <meta property="og:title" content="Travel Agency" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <title>DOG TOK</title>
+    <meta content="DOG TOK" property="og:title"/>
+    <meta content="summary_large_image" property="twitter:card"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8"/>
+    <meta content="summary_large_image" property="twitter:card"/>
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+        html {
+            line-height: 1.15;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+        }
+
+        p, li, ul, pre, div, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        button, input, optgroup, select, textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button, select {
+            text-transform: none;
+        }
+
+        button, [type="button"], [type="reset"], [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        button:-moz-focus, [type="button"]:-moz-focus, [type="reset"]:-moz-focus, [type="submit"]:-moz-focus {
+            outline: 1px dotted ButtonText;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        input {
+            padding: 2px 4px;
+        }
+
+        img {
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
     </style>
     <style data-tag="default-style-sheet">
-      html {
-        font-family: Poppins;
-        font-size: 16px;
-      }
+        html {
+            font-family: Poppins;
+            font-size: 16px;
+        }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.55;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+        body {
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: normal;
+            line-height: 1.55;
+            color: var(--dl-color-gray-black);
+            background-color: var(--dl-color-gray-white);
 
-      }
+        }
     </style>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      data-tag="font"
+            data-tag="font"
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div>
-      <link href="landing-page.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v14.0&appId=554003688672230&autoLogAppEvents=1" nonce="hq4zFyF8"></script>
+<div>
+    <link href="landing-page.css" rel="stylesheet"/>
 
-      <div class="landing-page-container">
+    <div class="landing-page-container">
         <div class="landing-page-top-container">
-          <nav data-role="Header" class="landing-page-navbar">
-            <h1>Travel</h1>
-            <div class="landing-page-right-side">
-              <div class="landing-page-links-container">
-                <span class="landing-page-text">Home</span>
-                <span class="landing-page-text01">About</span>
-                <span class="landing-page-text02">Tour Packages</span>
-                <span class="landing-page-text03">Contact</span>
-              </div>
-              <a href="#main-section" class="landing-page-link">
-                <div class="solid-button-container">
-                  <button class="solid-button-button button">
-                    <span>Explore places</span>
-                  </button>
-                </div>
-              </a>
-            </div>
-            <div data-type="BurgerMenu" class="landing-page-burger-menu">
-              <svg viewBox="0 0 1024 1024" class="landing-page-burger-menu">
-                <path
-                  d="M810.667 725.333h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-                ></path>
-                <path
-                  d="M810.667 426.667h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-                ></path>
-                <path
-                  d="M810.667 128h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-                ></path>
-              </svg>
-            </div>
-            <div data-type="MobileMenu" class="landing-page-mobile-menu">
-              <div class="landing-page-nav">
-                <div class="landing-page-top">
-                  <h1>Travel</h1>
-                  <div
-                    data-type="CloseMobileMenu"
-                    class="landing-page-close-menu"
-                  >
-                    <svg viewBox="0 0 1024 1024" class="landing-page-icon03">
-                      <path
-                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="landing-page-right-side1">
-                  <div class="landing-page-links-container1">
-                    <span class="landing-page-text04">Home</span>
-                    <span class="landing-page-text05">About</span>
-                    <span class="landing-page-text06">Tour Packages</span>
-                    <span>Contact</span>
-                  </div>
-                  <a href="#main-section" class="landing-page-link01">
-                    <div class="solid-button-container">
-                      <button class="solid-button-button button">
-                        <span>Explore places</span>
-                      </button>
+            <nav class="landing-page-navbar" data-role="Header">
+                <h1>DOG TOK</h1>
+                <div class="landing-page-right-side">
+                    <div class="landing-page-links-container">
+                        <a class="landing-page-link" href="#about">
+                            <span class="landing-page-text01">O nas</span>
+                        </a>
+                        <a class="landing-page-link" href="#gallery">
+                         <span class="landing-page-text02">Galeria</span>
+                        </a>
+                        <a class="landing-page-link" href="#footer">
+                            <span class="landing-page-text03">Kontakt</span>
+                        </a>
                     </div>
-                  </a>
+                    <a class="landing-page-link" href="#events-section">
+                        <div class="solid-button-container">
+                            <button class="solid-button-button button">
+                                <span>Nasze wydarzenia</span>
+                            </button>
+                        </div>
+                    </a>
                 </div>
-              </div>
-              <div class="landing-page-follow-container">
-                <span class="landing-page-text08">Follow us on</span>
-                <div class="landing-page-icons-container">
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="landing-page-link02"
-                  >
-                    <svg
-                      viewBox="0 0 877.7142857142857 1024"
-                      class="landing-page-icon05"
-                    >
-                      <path
-                        d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
-                      ></path>
+                <div class="landing-page-burger-menu" data-type="BurgerMenu">
+                    <svg class="landing-page-burger-menu" viewBox="0 0 1024 1024">
+                        <path
+                                d="M810.667 725.333h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
+                        ></path>
+                        <path
+                                d="M810.667 426.667h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
+                        ></path>
+                        <path
+                                d="M810.667 128h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
+                        ></path>
                     </svg>
-                  </a>
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="landing-page-link03"
-                  >
-                    <svg
-                      viewBox="0 0 602.2582857142856 1024"
-                      class="landing-page-icon07"
-                    >
-                      <path
-                        d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
-                      ></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="landing-page-link04"
-                  >
-                    <svg
-                      viewBox="0 0 950.8571428571428 1024"
-                      class="landing-page-icon09"
-                    >
-                      <path
-                        d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
-                      ></path>
-                    </svg>
-                  </a>
                 </div>
-              </div>
-            </div>
-          </nav>
-          <div class="landing-page-hero">
-            <div class="landing-page-content-container">
-              <h1 class="heading landing-page-text09">Book an exclusive</h1>
-              <h2 class="subheading landing-page-subheading">
-                home for your personal travel
-              </h2>
-              <span class="landing-page-text10">
-                <span>Each property is hand-picked,</span>
-                <br />
-                <span>personally visited and cannot be found elsewhere.</span>
-              </span>
-              <div class="solid-button-container">
-                <button class="solid-button-button button">
-                  <span>Explore homes</span>
-                </button>
-              </div>
-            </div>
-          </div>
+                <div class="landing-page-mobile-menu" data-type="MobileMenu">
+                    <div class="landing-page-nav">
+                        <div class="landing-page-top">
+                            <h1>DOG TOK</h1>
+                            <div
+                                    class="landing-page-close-menu"
+                                    data-type="CloseMobileMenu"
+                            >
+                                <svg class="landing-page-icon03" viewBox="0 0 1024 1024">
+                                    <path
+                                            d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="landing-page-right-side1">
+                            <div class="landing-page-links-container1">
+                                <a class="landing-page-link" href="#about">
+                                    <span class="landing-page-text05">O nas</span>
+                                </a>
+                                <a class="landing-page-link" href="#gallery">
+                                    <span class="landing-page-text06">Galeria</span>
+                                </a>
+                                <span>Kontakt</span>
+                            </div>
+                            <a class="landing-page-link01" href="#events-section">
+                                <div class="solid-button-container">
+                                    <button class="solid-button-button button">
+                                        <span>Nasze wydarzenia</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="landing-page-follow-container">
+                        <span class="landing-page-text08">Follow us on</span>
+                        <div class="landing-page-icons-container">
+                            <a
+                                    class="landing-page-link02"
+                                    href="https://instagram.com"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                            >
+                                <svg
+                                        class="landing-page-icon05"
+                                        viewBox="0 0 877.7142857142857 1024"
+                                >
+                                    <path
+                                            d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                    class="landing-page-link03"
+                                    href="https://facebook.com"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                            >
+                                <svg
+                                        class="landing-page-icon07"
+                                        viewBox="0 0 602.2582857142856 1024"
+                                >
+                                    <path
+                                            d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                    class="landing-page-link04"
+                                    href="https://twitter.com"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                            >
+                                <svg
+                                        class="landing-page-icon09"
+                                        viewBox="0 0 950.8571428571428 1024"
+                                >
+                                    <path
+                                            d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div id="main-section" class="landing-page-main">
-          <h1>Most famous places</h1>
-          <span class="landing-page-text15">Recommended</span>
-          <div class="landing-page-cards-container">
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>London</span></span>
-                <span class="place-card-text1">
-                  <span>
+        <div class="landing-page-main background" id="about">
+            <h1>O nas</h1>
+            <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>Rome</span></span>
-                <span class="place-card-text1">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1513342791620-b106dc487c94?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>Cluj-Napoca</span></span>
-                <span class="place-card-text1">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1551634979-2b11f8c946fe?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>Paris</span></span>
-                <span class="place-card-text1">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1585211969224-3e992986159d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>Amsterdam</span></span>
-                <span class="place-card-text1">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="place-card-container">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=1000"
-                class="place-card-image"
-              />
-              <div class="place-card-container1">
-                <span class="place-card-text"><span>Barcelona</span></span>
-                <span class="place-card-text1">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                  </span>
-                </span>
-                <div class="outline-button-container">
-                  <button class="outline-button-button button">
-                    <span>Discover place</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+                    do eiusmod tempor incididunt ut labore et dolore magna. fLorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna. ew
+                o eiusmod tempor incididunt ut labore et dolore magna. fLorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna. ew
+                o eiusmod tempor incididunt ut labore et dolore magna. fLorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna. ewo eiusmod tempor incididunt ut labore et dolore magna. fLorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna. ew
+
+            </span>
+
         </div>
-        <div class="landing-page-footer">
-          <div class="landing-page-menu">
-            <h1>Travel</h1>
-            <div class="landing-page-links-container2">
-              <div class="landing-page-container1">
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link05"
-                >
-                  Tour packages
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link06"
-                >
-                  Personalized offers
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link07"
-                >
-                  Special deals
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link08"
-                >
-                  Summer holiday
-                </a>
-              </div>
-              <div class="landing-page-container2">
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link09"
-                >
-                  About us
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link10"
-                >
-                  FAQ
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link11"
-                >
-                  Terms and conditions
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link12"
-                >
-                  Contact
-                </a>
-              </div>
+        <div class="landing-page-main" id="events-section">
+            <h1>Nasze wydarzenia</h1>
+            <div class="landing-page-cards-container">
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/274032032_992235921383163_1731636189124780516_n.jpg?stp=dst-jpg_p640x640&_nc_cat=100&ccb=1-7&_nc_sid=340051&_nc_ohc=GDBJTA9_yUcAX-P6DCu&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT8X9QULEA72Wnfr28sQLgD9EzqexoNUGL5Yg4l1KzVbuw&oe=62E53791"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Agility</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/1360868007660453/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/272931548_986436461963109_1185778472709727598_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=340051&_nc_ohc=xmtBq9BNzx4AX_viYZn&_nc_oc=AQmihLiDyJDk04RhNclo4Ontxc4sci-unnZpXf4_RVfCnv9Gvq4d8r4YfgScIOpkVnw&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT9X3hvSjR6RMjLrVLIVynn2N95Cg7F9P37z36Exs8dE1Q&oe=62E6E222"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Motywacja</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/371272357668610/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/273109972_988091968464225_8308001950507966036_n.jpg?stp=dst-jpg_p960x960&_nc_cat=106&ccb=1-7&_nc_sid=340051&_nc_ohc=dJhBIb_4wioAX-_D74n&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT_PyY3BNLNOrsB281k8cbplhin1bRThPlZbf9KEhiTWyg&oe=62E54907"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Dummy</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/339343551422155/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/265596265_953507495256006_8311116964014975926_n.jpg?stp=dst-jpg_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=340051&_nc_ohc=4qDggMho2oUAX9DWH_g&tn=qlPU4xw2jTEkjY4t&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT8EAG-jniqp0V58JyAf1_-XEJmg3MdUpEEwD5bZjaRJ-Q&oe=62E55DB8"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Frisbee</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/585248066099586/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/264182836_951169058823183_533933431591895070_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=340051&_nc_ohc=LS-UG9o-rf0AX-v_1qb&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT_wNPA4f_FpCbsto4xrBNorIpBI9ikKpS1zAFD2WkTspA&oe=62E661F7"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Obedience</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/224145836404240/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t39.30808-6/277519838_1017472485526173_3914608828797238053_n.jpg?stp=dst-jpg_p180x540&_nc_cat=100&ccb=1-7&_nc_sid=340051&_nc_ohc=Jp9cecGlbNcAX90ViPv&_nc_ht=scontent.fpoz2-1.fna&oh=00_AT9Eocj_dA0Ch0hj1QEr_4iqFAVZe_aZZbodlpM4KpPPMw&oe=62E5560D"
+                    />
+                    <div class="place-card-container1">
+                        <span class="place-card-text"><span>Fotografia</span></span>
+                        <span class="place-card-text1">
+                  <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                  </span>
+                </span>
+                        <div class="outline-button-container">
+                            <a href="https://www.facebook.com/events/1545966199137271/">
+                                <button class="outline-button-button button">
+                                    <span>Odkryj</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="landing-page-follow-container1">
-              <span class="landing-page-text16">Follow us on</span>
-              <div class="landing-page-icons-container1">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link13"
-                >
-                  <svg
-                    viewBox="0 0 877.7142857142857 1024"
-                    class="landing-page-icon11"
-                  >
-                    <path
-                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
-                    ></path>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link14"
-                >
-                  <svg
-                    viewBox="0 0 602.2582857142856 1024"
-                    class="landing-page-icon13"
-                  >
-                    <path
-                      d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
-                    ></path>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="landing-page-link15"
-                >
-                  <svg
-                    viewBox="0 0 950.8571428571428 1024"
-                    class="landing-page-icon15"
-                  >
-                    <path
-                      d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+            <h2>I wiele więcej!</h2>
+            <div class="fb-page" data-href="https://www.facebook.com/dogtok.szkoleniowyraj/" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/dogtok.szkoleniowyraj/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/dogtok.szkoleniowyraj/">DOG TOK - Szkoleniowy Raj</a></blockquote></div>
         </div>
-      </div>
+
+        <div class="landing-page-main background" id="gallery">
+            <h1>Galeria</h1>
+            <div class="landing-page-cards-container">
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/1.jpg"
+                    />
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/2.jpg"
+                    />
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/3.jpg"
+                    />
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/4.jpg"
+                    />
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/5.jpg"
+                    />
+                </div>
+                <div class="place-card-container">
+                    <img
+                            alt="image"
+                            class="place-card-image"
+                            src="images/gallery/6.jpg"
+                    />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="landing-page-footer" id="footer">
+            <div class="landing-page-menu">
+                <h1>DOG TOK</h1>
+                <div class="landing-page-links-container2">
+                    <div class="landing-page-container1">
+                        <a
+                                class="landing-page-link05"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Tour packages
+                        </a>
+                        <a
+                                class="landing-page-link06"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Personalized offers
+                        </a>
+                        <a
+                                class="landing-page-link07"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Special deals
+                        </a>
+                        <a
+                                class="landing-page-link08"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Summer holiday
+                        </a>
+                    </div>
+                    <div class="landing-page-container2">
+                        <a
+                                class="landing-page-link09"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            About us
+                        </a>
+                        <a
+                                class="landing-page-link10"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            FAQ
+                        </a>
+                        <a
+                                class="landing-page-link11"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Terms and conditions
+                        </a>
+                        <a
+                                class="landing-page-link12"
+                                href="https://example.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="landing-page-follow-container1">
+                    <span class="landing-page-text16">Follow us on</span>
+                    <div class="landing-page-icons-container1">
+                        <a
+                                class="landing-page-link13"
+                                href="https://instagram.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            <svg
+                                    class="landing-page-icon11"
+                                    viewBox="0 0 877.7142857142857 1024"
+                            >
+                                <path
+                                        d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <a
+                                class="landing-page-link14"
+                                href="https://facebook.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            <svg
+                                    class="landing-page-icon13"
+                                    viewBox="0 0 602.2582857142856 1024"
+                            >
+                                <path
+                                        d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                                ></path>
+                            </svg>
+                        </a>
+                        <a
+                                class="landing-page-link15"
+                                href="https://twitter.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                        >
+                            <svg
+                                    class="landing-page-icon15"
+                                    viewBox="0 0 950.8571428571428 1024"
+                            >
+                                <path
+                                        d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-  </body>
+</div>
+<script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+</body>
 </html>
