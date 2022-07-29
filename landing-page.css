@@ -474,10 +474,9 @@
 }
 
 .fb-page, .fb-page:before, .fb-page:after {
-    margin-top: var(--dl-space-space-quadruple);
     box-shadow: 0 0 var(--dl-space-space-unit) rgba(0, 0, 0, 0.2);
     color: white;
-    margin-bottom: calc(var(--dl-space-space-quadruple) * 2);
+    margin-bottom: var(--dl-space-space-doubleunit);
 }
 
 .main-description {
