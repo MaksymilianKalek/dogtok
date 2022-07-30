@@ -68,7 +68,7 @@
     font-size: 12px;
     max-width: 250px;
     margin-bottom: var(--dl-space-space-doubleunit);
-    height: calc(var(--dl-space-space-quadruple) + var(--dl-space-space-unit));
+    height: calc(var(--dl-space-space-quadruple) + var(--dl-space-space-tripleunit));
 }
 
 @media (max-width: 767px) {
@@ -565,7 +565,7 @@
         background-position: 65% 20%;
     }
     .place-card-text1 {
-        height: calc(var(--dl-space-space-doubleunit) * 5);
+        height: calc(var(--dl-space-space-doubleunit) * 5.5);
     }
 }
 
@@ -632,7 +632,7 @@
         margin-left: 0;
     }
     .place-card-text1 {
-        height: calc(var(--dl-space-space-doubleunit) * 3);
+        height: calc(var(--dl-space-space-doubleunit) * 3.5);
     }
 }
 
