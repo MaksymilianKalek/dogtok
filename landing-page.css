@@ -482,6 +482,11 @@
 .main-description {
     margin-top: var(--dl-space-space-unit);
 }
+@media (max-width: 1900px) {
+    .landing-page-top-container {
+        background-position: 50% 20%;
+    }
+}
 
 @media (max-width: 1100px) {
     #about {
