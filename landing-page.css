@@ -1,9 +1,6 @@
 .primary-light {
     color: var(--dl-color-primary-light);
 }
-
-
-
 .solid-button-container {
     display: flex;
     position: relative;
@@ -31,6 +28,7 @@
     padding: var(--dl-space-space-unit) var(--dl-space-space-doubleunit);
     background-color: var(--dl-color-gray-white);
     cursor: pointer;
+    outline: none;
 }
 
 .place-card-container {
@@ -481,6 +479,7 @@
 
 .main-description {
     margin-top: var(--dl-space-space-unit);
+    text-align: center;
 }
 @media (max-width: 1900px) {
     .landing-page-top-container {
