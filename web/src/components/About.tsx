@@ -17,7 +17,7 @@ export default function About() {
     }, (context) => {
       const { isMobile } = context.conditions as { isMobile: boolean };
       const startPos = isMobile ? 'top 55%' : 'top 65%';
-      const endPos = isMobile ? 'bottom 40%' : 'bottom 35%';
+      const endPos = isMobile ? 'bottom 20%' : 'bottom 15%';
       
       revealLines.forEach((line) => {
         gsap.timeline({
@@ -28,9 +28,9 @@ export default function About() {
             scrub: 0.5,
           }
         })
-        .to(line, { opacity: 1, duration: 0.3, ease: 'power1.inOut' })
-        .to(line, { opacity: 1, duration: 0.4 })
-        .to(line, { opacity: 0.12, duration: 0.3, ease: 'power1.inOut' });
+        .to(line, { opacity: 1, duration: 0.2, ease: 'power1.inOut' })
+        .to(line, { opacity: 1, duration: 0.6 })
+        .to(line, { opacity: 0.12, duration: 0.2, ease: 'power1.inOut' });
       });
     });
   }, { scope: containerRef });
