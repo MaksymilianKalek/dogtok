@@ -1,0 +1,68 @@
+{
+  "menu": {
+    "menu": "Menu",
+    "close": "Close",
+    "about": "About",
+    "events": "Events",
+    "schedule": "Schedule",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Szkoleniowy Raj",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "A place in the Magic Forest where workshops, seminars, and camps for dogs and their owners take place.",
+    "p2": "3.5 hectares of fenced area - meadows, a pond, summer houses, and a hall in the very heart of the forest.",
+    "p3": "An ideal place for dog lovers who want to develop their passions.",
+    "p4": "A professional 2500m² training ground, sanitary facilities, kitchenette, and accommodation options - dedicate all your time to your passion."
+  },
+  "events": {
+    "title": "Events",
+    "items": {
+      "agility": "Agility",
+      "motivation": "Motivation",
+      "dummy": "Dummy",
+      "frisbee": "Frisbee",
+      "obedience": "Obedience",
+      "photography": "Photography",
+      "mantrailing": "Mantrailing",
+      "communication": "Communication Classes"
+    },
+    "descriptions": {
+      "agility": "Navigate obstacle courses with your dog at top speed. Build teamwork, precision, and confidence through dynamic agility training sessions.",
+      "motivation": "Unlock your dog's drive and enthusiasm. Learn reward-based techniques that strengthen the bond between handler and dog.",
+      "dummy": "Master retrieval and hunting-style exercises. Develop your dog's natural instincts through structured dummy training drills.",
+      "frisbee": "High-energy disc sport combining throws, catches, and freestyle routines. Perfect for active dogs who love to run and leap.",
+      "obedience": "Precision training for everyday manners and competitive obedience. From basics to advanced - build reliable, responsive communication.",
+      "photography": "Capture stunning portraits of your dog in a natural forest setting. Professional sessions with expert guidance on posing and lighting.",
+      "mantrailing": "Scent-tracking workshops where your dog follows a specific person's trail. Tap into their incredible nose and problem-solving abilities.",
+      "communication": "Understand your dog's body language and signals. Improve your daily interactions through science-based communication methods."
+    }
+  },
+  "schedule": {
+    "title": "Schedule",
+    "months": {
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November"
+    }
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "footer": {
+    "tagline": "Szkoleniowy Raj",
+    "contact": "Contact",
+    "social": "Social",
+    "credit": "Designed & developed by"
+  }
+}

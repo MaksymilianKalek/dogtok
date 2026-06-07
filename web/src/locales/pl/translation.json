@@ -1,0 +1,68 @@
+{
+  "menu": {
+    "menu": "Menu",
+    "close": "Zamknij",
+    "about": "O nas",
+    "events": "Wydarzenia",
+    "schedule": "Harmonogram",
+    "gallery": "Galeria",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tagline": "Szkoleniowy Raj",
+    "scroll": "Przewiń"
+  },
+  "about": {
+    "title": "O nas",
+    "p1": "Miejsce w Magicznym Lesie, gdzie odbywają się warsztaty, seminaria i obozy dla psów i ich właścicieli.",
+    "p2": "3,5 hektara ogrodzonego terenu - łąki, staw, domki letniskowe oraz salka w samym sercu lasu.",
+    "p3": "Idealne miejsce dla psiozakręconych osób, które chcą rozwijać swoje pasje.",
+    "p4": "Profesjonalny plac treningowy 2500m², zaplecze sanitarne, aneks kuchenny i opcje noclegowe - poświęć cały czas Waszej pasji."
+  },
+  "events": {
+    "title": "Wydarzenia",
+    "items": {
+      "agility": "Agility",
+      "motivation": "Motywacja",
+      "dummy": "Dummy",
+      "frisbee": "Frisbee",
+      "obedience": "Obedience",
+      "photography": "Fotografia",
+      "mantrailing": "Mantrailing",
+      "communication": "Klasy komunikacji"
+    },
+    "descriptions": {
+      "agility": "Pokonuj tory przeszkód ze swoim psem na pełnej prędkości. Buduj współpracę, precyzję i pewność siebie podczas dynamicznych treningów agility.",
+      "motivation": "Odblokuj napęd i entuzjazm Twojego psa. Poznaj techniki oparte na nagrodach, które wzmacniają więź między przewodnikiem a psem.",
+      "dummy": "Opanuj ćwiczenia aportowania w stylu myśliwskim. Rozwijaj naturalne instynkty psa poprzez ustrukturyzowane treningi z dummy.",
+      "frisbee": "Energetyczny sport z dyskiem łączący rzuty, łapanie i freestyle. Idealny dla aktywnych psów, które kochają biegać i skakać.",
+      "obedience": "Precyzyjny trening manier na co dzień i obedience sportowy. Od podstaw po zaawansowane - buduj niezawodną, responsywną komunikację.",
+      "photography": "Uchwyć piękne portrety Twojego psa w naturalnym leśnym otoczeniu. Profesjonalne sesje z fachowym doradztwem w pozowaniu i oświetleniu.",
+      "mantrailing": "Warsztaty tropienia zapachowego, gdzie pies podąża za śladem konkretnej osoby. Wykorzystaj jego niesamowity nos i zdolności rozwiązywania problemów.",
+      "communication": "Zrozum mowę ciała i sygnały Twojego psa. Popraw codzienne interakcje dzięki opartym na nauce metodom komunikacji."
+    }
+  },
+  "schedule": {
+    "title": "Harmonogram",
+    "months": {
+      "march": "Marzec",
+      "april": "Kwiecień",
+      "may": "Maj",
+      "june": "Czerwiec",
+      "july": "Lipiec",
+      "august": "Sierpień",
+      "september": "Wrzesień",
+      "october": "Październik",
+      "november": "Listopad"
+    }
+  },
+  "gallery": {
+    "title": "Galeria"
+  },
+  "footer": {
+    "tagline": "Szkoleniowy Raj",
+    "contact": "Kontakt",
+    "social": "Social",
+    "credit": "Designed & developed by"
+  }
+}
