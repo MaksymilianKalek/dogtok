@@ -27,6 +27,26 @@
     --radius-sm: 0;
     --radius-md: 0;
     --radius-lg: 0;
+
+    /* --- TYPOGRAPHY TOKENS --- */
+    /* Static Scale (Modular) */
+    --text-xs: 0.75rem;     /* 12px */
+    --text-sm: 0.875rem;    /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg: 1.125rem;    /* 18px */
+    --text-xl: 1.25rem;     /* 20px */
+
+    /* Fluid Scale (Clamp) */
+    --text-fluid-xs: clamp(0.9rem, 2vw, 1.1rem);
+    --text-fluid-sm: clamp(1.2rem, 3vw, 1.5rem);
+    --text-fluid-md: clamp(1.5rem, 4vmin, 2.5rem);
+    --text-fluid-lg: clamp(2rem, 5vw, 3.5rem);
+    --text-fluid-xl: clamp(3rem, 8vw, 5rem);
+    --text-fluid-xxl: clamp(5rem, 18vw, 14rem);
+
+    /* Huge Accessible Tokens */
+    --text-huge-1: 5.625rem; /* 90px */
+    --text-huge-2: 8.75rem;  /* 140px */
 }
 
 *, *::before, *::after {

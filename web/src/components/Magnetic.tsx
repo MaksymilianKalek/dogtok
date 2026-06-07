@@ -22,11 +22,11 @@ export default function Magnetic({ children, strength = 0.3 }: MagneticProps) {
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       
-      gsap.to(element, { x: x * strength, y: y * strength, duration: 0.3, ease: 'power2.out' });
+      gsap.to(element, { x: x * strength, y: y * strength, duration: 0.6, ease: 'power3.out' });
     };
 
     const onMouseLeave = () => {
-      gsap.to(element, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
+      gsap.to(element, { x: 0, y: 0, duration: 0.7, ease: 'power3.out' });
     };
 
     element.addEventListener('mousemove', onMouseMove);

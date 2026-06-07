@@ -21,17 +21,18 @@ export default function Founder() {
       }
     });
 
-    // Image reveal
-    gsap.fromTo('.founder-img-wrap', 
-      { clipPath: 'inset(100% 0% 0% 0%)' },
+    // Premium Image Parallax / Scale reveal
+    gsap.fromTo('.founder-img', 
+      { scale: 1.15, yPercent: -5 },
       {
-        clipPath: 'inset(0% 0% 0% 0%)',
-        ease: 'expo.out',
+        scale: 1,
+        yPercent: 5,
+        ease: 'none',
         scrollTrigger: {
-          trigger: '.founder-content',
-          start: 'top 65%',
-          end: 'bottom 45%',
-          scrub: 1,
+          trigger: '.founder-img-wrap',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.5,
         }
       }
     );

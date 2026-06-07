@@ -51,7 +51,7 @@ export default function Footer() {
             <div className="footer-contact-block">
               <span className="footer-label">Mail</span>
               <Magnetic strength={0.1}>
-                <a href="mailto:dogtok.szkoleniowyraj@gmail.com" data-hover>dogtok.szkoleniowyraj@gmail.com</a>
+                <a href="mailto:dogtok.szkoleniowyraj@gmail.com" className="footer-email-link" data-hover>dogtok.szkoleniowyraj@gmail.com</a>
               </Magnetic>
             </div>
             <div className="footer-contact-block">
