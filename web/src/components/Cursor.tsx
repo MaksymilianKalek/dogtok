@@ -26,8 +26,8 @@ export default function Cursor() {
     window.addEventListener('mousemove', onMouseMove);
 
     gsap.ticker.add(() => {
-      fX += (mouseX - fX) * 0.2;
-      fY += (mouseY - fY) * 0.2;
+      fX += (mouseX - fX) * 0.4;
+      fY += (mouseY - fY) * 0.4;
       gsap.set(followerRef.current, { x: fX, y: fY });
     });
 

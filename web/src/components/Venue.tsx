@@ -31,14 +31,18 @@ export default function Venue() {
   return (
     <section className="venue" id="venue" ref={containerRef}>
       <div className="venue-content">
-        <span className="section-tag">{t('venue.title')}</span>
+        <div className="venue-left">
+          <span className="section-tag venue-sticky-title">{t('venue.title')}</span>
+        </div>
         
-        <div className="venue-grid">
+        <div className="venue-list">
           {venueItems.map((item) => (
-            <div key={item.key} className="venue-card">
+            <div key={item.key} className="venue-list-item">
               <span className="venue-num">{item.num}</span>
-              <h3 className="venue-card-title">{t(`venue.items.${item.key}`)}</h3>
-              <p className="venue-card-desc">{t(`venue.descriptions.${item.key}`)}</p>
+              <div className="venue-item-content">
+                <h3 className="venue-item-title">{t(`venue.items.${item.key}`)}</h3>
+                <p className="venue-item-desc">{t(`venue.descriptions.${item.key}`)}</p>
+              </div>
             </div>
           ))}
         </div>

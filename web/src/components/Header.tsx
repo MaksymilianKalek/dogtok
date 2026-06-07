@@ -1,7 +1,11 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
+import Magnetic from './Magnetic';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface HeaderProps {
   isLoaded: boolean;
@@ -12,11 +16,12 @@ interface HeaderProps {
 export default function Header({ isLoaded, isMenuOpen, toggleMenu }: HeaderProps) {
   const { t } = useTranslation();
   const headerRef = useRef<HTMLElement>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
+  const logoRef = useRef<HTMLAnchorElement>(null);
 
   useGSAP(() => {
     // Initial state
     gsap.set(headerRef.current, { opacity: 0, y: -30 });
+    gsap.set(logoRef.current, { opacity: 0, y: -20 });
     
     if (isLoaded) {
       gsap.to(headerRef.current, {
@@ -26,49 +31,34 @@ export default function Header({ isLoaded, isMenuOpen, toggleMenu }: HeaderProps
         delay: 0.8,
         ease: 'expo.out'
       });
+
+      ScrollTrigger.create({
+        trigger: '.about',
+        start: 'top 80%',
+        onEnter: () => gsap.to(logoRef.current, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }),
+        onLeaveBack: () => gsap.to(logoRef.current, { opacity: 0, y: -20, duration: 0.4, ease: 'power2.out' })
+      });
     }
   }, [isLoaded]);
 
-  useGSAP(() => {
-    if (!btnRef.current) return;
-    
-    const onMouseMove = (e: MouseEvent) => {
-      const rect = btnRef.current!.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      gsap.to(btnRef.current, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: 'power2.out' });
-    };
-
-    const onMouseLeave = () => {
-      gsap.to(btnRef.current, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
-    };
-
-    btnRef.current.addEventListener('mousemove', onMouseMove);
-    btnRef.current.addEventListener('mouseleave', onMouseLeave);
-
-    return () => {
-      btnRef.current?.removeEventListener('mousemove', onMouseMove);
-      btnRef.current?.removeEventListener('mouseleave', onMouseLeave);
-    };
-  }, []);
-
   return (
     <header className="header" id="header" ref={headerRef}>
-      <a href="#" className="header-logo" data-hover>DOG TOK</a>
-      <button 
-        className="menu-toggle" 
-        id="menuToggle" 
-        data-hover 
-        aria-expanded={isMenuOpen} 
-        onClick={toggleMenu}
-        ref={btnRef}
-      >
-        <span className="menu-toggle-text">{t('menu.menu')}</span>
-        <div className="menu-toggle-icon">
-          <span></span>
-          <span></span>
-        </div>
-      </button>
+      <a href="#" className="header-logo" data-hover ref={logoRef}>DOG TOK</a>
+      <Magnetic strength={0.2}>
+        <button 
+          className="menu-toggle" 
+          id="menuToggle" 
+          data-hover 
+          aria-expanded={isMenuOpen} 
+          onClick={toggleMenu}
+        >
+          <span className="menu-toggle-text">{t('menu.menu')}</span>
+          <div className="menu-toggle-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </Magnetic>
     </header>
   );
 }

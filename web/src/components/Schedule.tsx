@@ -159,6 +159,7 @@ export default function Schedule() {
                   className="schedule-month-header"
                   onClick={() => toggle(idx)}
                   type="button"
+                  data-hover
                 >
                   <span className="schedule-month-name">{block.month}</span>
                   <span className="schedule-month-count">{block.events.length}</span>

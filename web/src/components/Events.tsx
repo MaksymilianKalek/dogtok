@@ -50,6 +50,7 @@ export default function Events() {
                   className="event-header"
                   onClick={() => toggle(idx)}
                   type="button"
+                  data-hover
                 >
                   <span className="event-num">{(idx + 1).toString().padStart(2, '0')}</span>
                   <span className="event-name">{event.name}</span>

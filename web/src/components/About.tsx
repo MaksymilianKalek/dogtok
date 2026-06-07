@@ -13,18 +13,29 @@ export default function About() {
   useGSAP(() => {
     const revealLines = gsap.utils.toArray('.reveal-line') as HTMLElement[];
 
-    revealLines.forEach((line) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: line,
-          start: 'top 65%',
-          end: 'bottom 35%',
-          scrub: 0.5,
-        }
-      })
-      .to(line, { opacity: 1, duration: 0.3, ease: 'power1.inOut' })
-      .to(line, { opacity: 1, duration: 0.4 })
-      .to(line, { opacity: 0.12, duration: 0.3, ease: 'power1.inOut' });
+    let mm = gsap.matchMedia();
+    
+    mm.add({
+      isDesktop: "(min-width: 769px)",
+      isMobile: "(max-width: 768px)"
+    }, (context) => {
+      let { isMobile } = context.conditions as { isMobile: boolean };
+      const startPos = isMobile ? 'top 55%' : 'top 65%';
+      const endPos = isMobile ? 'bottom 40%' : 'bottom 35%';
+      
+      revealLines.forEach((line) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: line,
+            start: startPos,
+            end: endPos,
+            scrub: 0.5,
+          }
+        })
+        .to(line, { opacity: 1, duration: 0.3, ease: 'power1.inOut' })
+        .to(line, { opacity: 1, duration: 0.4 })
+        .to(line, { opacity: 0.12, duration: 0.3, ease: 'power1.inOut' });
+      });
     });
   }, { scope: containerRef });
 
