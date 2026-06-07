@@ -14,11 +14,11 @@ export default function Footer() {
 
   useGSAP(() => {
     // Entrance animations
-    const entranceEls = gsap.utils.toArray(['.footer-top', '.footer-middle']) as HTMLElement[];
+    const entranceEls = gsap.utils.toArray(['.footer-middle']) as HTMLElement[];
     entranceEls.forEach((el) => {
       ScrollTrigger.create({
-        trigger: el,
-        start: 'top 85%',
+        trigger: containerRef.current,
+        start: 'top bottom-=20',
         once: true,
         onEnter: () => {
           el.classList.add('in-view');
@@ -51,37 +51,15 @@ export default function Footer() {
   }, { scope: containerRef });
 
   const handleBackToTop = () => {
-    // @ts-expect-error global lenis
     if (window.lenis) {
-      // @ts-expect-error global lenis
       window.lenis.scrollTo(0, { duration: 2 });
-    }
-  };
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
-    e.preventDefault();
-    // @ts-expect-error global lenis
-    if (window.lenis) {
-      // @ts-expect-error global lenis
-      window.lenis.scrollTo(target, { offset: 0, duration: 1.5 });
     }
   };
 
   return (
     <footer className="footer" id="footer" ref={containerRef}>
       <div className="footer-inner">
-        <div className="footer-top">
-          <div>
-            <div className="footer-title">DOG TOK</div>
-            <div className="footer-tagline">{t('footer.tagline')}</div>
-          </div>
-          <div className="footer-nav">
-            <a href="#about" data-hover onClick={(e) => handleNavClick(e, '#about')}>{t('menu.about')}</a>
-            <a href="#events" data-hover onClick={(e) => handleNavClick(e, '#events')}>{t('menu.events')}</a>
-            <a href="#schedule" data-hover onClick={(e) => handleNavClick(e, '#schedule')}>{t('menu.schedule')}</a>
-            <a href="#gallery" data-hover onClick={(e) => handleNavClick(e, '#gallery')}>{t('menu.gallery')}</a>
-          </div>
-        </div>
+        <span className="section-tag" style={{ display: 'block', marginBottom: '3rem' }}>{t('menu.contact')}</span>
         <div className="footer-middle">
           <div className="footer-map">
             <iframe 
@@ -94,7 +72,7 @@ export default function Footer() {
           </div>
           <div className="footer-contact">
             <div className="footer-contact-block">
-              <span className="footer-label">{t('footer.contact')}</span>
+              <span className="footer-label">Mail</span>
               <a href="mailto:dogtok.szkoleniowyraj@gmail.com" data-hover>dogtok.szkoleniowyraj@gmail.com</a>
             </div>
             <div className="footer-contact-block">

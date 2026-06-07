@@ -37,9 +37,7 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
     e.preventDefault();
     closeMenu();
     setTimeout(() => {
-      // @ts-expect-error global lenis
       if (window.lenis) {
-        // @ts-expect-error global lenis
         window.lenis.scrollTo(target, { offset: 0, duration: 1.5 });
       }
     }, 500);
@@ -50,12 +48,15 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
       className={`nav-overlay ${isOpen ? 'active' : ''}`} 
       id="navOverlay" 
       aria-hidden={!isOpen}
-      ref={overlayRef}
     >
+      <div className="nav-overlay-bg"></div>
       <div className="nav-overlay-inner">
         <div className="nav-overlay-links" ref={linksRef}>
           <div className="nav-link-wrap">
             <a href="#about" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#about')}>{t('menu.about')}</a>
+          </div>
+          <div className="nav-link-wrap">
+            <a href="#venue" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#venue')}>{t('menu.venue')}</a>
           </div>
           <div className="nav-link-wrap">
             <a href="#events" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#events')}>{t('menu.events')}</a>
@@ -64,7 +65,7 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
             <a href="#schedule" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#schedule')}>{t('menu.schedule')}</a>
           </div>
           <div className="nav-link-wrap">
-            <a href="#gallery" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#gallery')}>{t('menu.gallery')}</a>
+            <a href="#founder" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#founder')}>{t('menu.founder')}</a>
           </div>
           <div className="nav-link-wrap">
             <a href="#footer" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#footer')}>{t('menu.contact')}</a>

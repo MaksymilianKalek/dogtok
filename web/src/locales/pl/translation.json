@@ -3,9 +3,11 @@
     "menu": "Menu",
     "close": "Zamknij",
     "about": "O nas",
+    "venue": "O miejscu",
     "events": "Wydarzenia",
     "schedule": "Harmonogram",
     "gallery": "Galeria",
+    "founder": "Założycielka",
     "contact": "Kontakt"
   },
   "hero": {
@@ -14,10 +16,25 @@
   },
   "about": {
     "title": "O nas",
-    "p1": "Miejsce w Magicznym Lesie, gdzie odbywają się warsztaty, seminaria i obozy dla psów i ich właścicieli.",
-    "p2": "3,5 hektara ogrodzonego terenu - łąki, staw, domki letniskowe oraz salka w samym sercu lasu.",
-    "p3": "Idealne miejsce dla psiozakręconych osób, które chcą rozwijać swoje pasje.",
-    "p4": "Profesjonalny plac treningowy 2500m², zaplecze sanitarne, aneks kuchenny i opcje noclegowe - poświęć cały czas Waszej pasji."
+    "p1": "Szkoleniowy Raj w Magicznym Lesie. Wyjątkowa przestrzeń stworzona z myślą o warsztatach, seminariach i obozach dla psów oraz ich przewodników.",
+    "p2": "Oddajemy do Waszej dyspozycji 3,5 hektara w pełni ogrodzonego terenu: rozległe łąki, prywatny staw, komfortowe domki letniskowe oraz nowoczesną salę szkoleniową.",
+    "p3": "To miejsce zaprojektowane przez psiozakręconych dla psiozakręconych. Idealne środowisko, by odciąć się od codzienności i w pełni skupić na rozwoju.",
+    "p4": "Czeka tu na Was profesjonalny plac treningowy (2500 m²), pełne zaplecze sanitarne, aneks kuchenny i wygodne noclegi. Wy poświęcacie czas swojej pasji – my dbamy o całą resztę."
+  },
+  "venue": {
+    "title": "O miejscu",
+    "items": {
+      "accommodation": "Baza noclegowa",
+      "pool": "Psia strefa relaksu",
+      "food": "Kulinaria i wyżywienie",
+      "infrastructure": "Bezpieczna przestrzeń"
+    },
+    "descriptions": {
+      "accommodation": "Oferujemy 20 miejsc w komfortowych, w 100% psiolubnych domkach. Każdy z nich posiada zamykaną werandę, a na terenie ośrodka rozmieściliśmy wygodne śmietniki z woreczkami, by dbanie o czystość było całkowicie bezproblemowe.",
+      "pool": "Na terenie Szkoleniowego Raju znajduje się prywatny basen dla psów. To wymarzona strefa regeneracji i ochłody po intensywnych treningach w cieplejsze dni.",
+      "food": "Do Waszej dyspozycji oddajemy w pełni wyposażony aneks kuchenny. Istnieje również możliwość wybrania opcji pełnego wyżywienia (również opcji wege), byście mogli zaoszczędzić czas i skupić się wyłącznie na treningu.",
+      "infrastructure": "Cały ośrodek to szczelnie ogrodzona strefa z darmowym, wewnętrznym parkingiem dla gości. Gwarantujemy pełną swobodę dla psów, bezpieczeństwo i całkowity brak miejskich rozproszeń."
+    }
   },
   "events": {
     "title": "Wydarzenia",
@@ -32,14 +49,14 @@
       "communication": "Klasy komunikacji"
     },
     "descriptions": {
-      "agility": "Pokonuj tory przeszkód ze swoim psem na pełnej prędkości. Buduj współpracę, precyzję i pewność siebie podczas dynamicznych treningów agility.",
-      "motivation": "Odblokuj napęd i entuzjazm Twojego psa. Poznaj techniki oparte na nagrodach, które wzmacniają więź między przewodnikiem a psem.",
-      "dummy": "Opanuj ćwiczenia aportowania w stylu myśliwskim. Rozwijaj naturalne instynkty psa poprzez ustrukturyzowane treningi z dummy.",
-      "frisbee": "Energetyczny sport z dyskiem łączący rzuty, łapanie i freestyle. Idealny dla aktywnych psów, które kochają biegać i skakać.",
-      "obedience": "Precyzyjny trening manier na co dzień i obedience sportowy. Od podstaw po zaawansowane - buduj niezawodną, responsywną komunikację.",
-      "photography": "Uchwyć piękne portrety Twojego psa w naturalnym leśnym otoczeniu. Profesjonalne sesje z fachowym doradztwem w pozowaniu i oświetleniu.",
-      "mantrailing": "Warsztaty tropienia zapachowego, gdzie pies podąża za śladem konkretnej osoby. Wykorzystaj jego niesamowity nos i zdolności rozwiązywania problemów.",
-      "communication": "Zrozum mowę ciała i sygnały Twojego psa. Popraw codzienne interakcje dzięki opartym na nauce metodom komunikacji."
+      "agility": "Na miejscu dostępny jest tor do agility złożony z 25 elementów (m.in. hopki, kładki i tunele). Po dokładną specyfikację zapraszamy do kontaktu poprzez e-mail lub media społecznościowe. Tor jest zgodny z najnowszymi wytycznymi FCI.",
+      "motivation": "Warsztaty prowadzone przez Paulę Gumińską odbywają się na placu (z możliwością nocnego oświetlenia) lub – w razie niepogody – w klimatyzowanej i ogrzewanej sali. Sala wyposażona jest w projektor, a jej podłoga pokryta jest miękką sztuczną trawą, tak aby psy mogły bezpiecznie pracować.",
+      "dummy": "Ogrodzony teren idealnie sprawdza się do trenowania i doskonalenia aportu.",
+      "frisbee": "Ogrodzone pole idealnie sprawdzi się do trenowania frisbee, a dzięki bogatemu wyposażeniu obiektu ze spokojem możecie trenować również inne sporty z dyskiem. Frisgility, freestyle czy dartbee – wszystko, co potrzebne, jest już na miejscu.",
+      "obedience": "Precyzyjny trening manier na co dzień i obedience sportowy. Od podstaw po poziom zaawansowany – buduj niezawodną, responsywną komunikację.",
+      "photography": "DOG TOK regularnie przyjmuje psich fotografów, którzy zarażają pasją kolejne osoby. Dzięki sali wyposażonej w krzesła, stoliki oraz projektor, część teoretyczna może być przeprowadzana w bardzo wygodnych warunkach. Na część praktyczną idealnie nadaje się nie tylko sam ośrodek szkoleniowy, ale także otaczający go las i natura.",
+      "mantrailing": "Warsztaty tropienia zapachowego, podczas których pies podąża za śladem konkretnej osoby. Wykorzystaj jego niesamowity nos i zdolności rozwiązywania problemów.",
+      "communication": "Na terenie możliwe jest rozstawienie dodatkowego ogrodzenia z furtką, tak aby umożliwić bezpieczny kontakt psom biorącym udział w wydarzeniu. Teren został zaprojektowany w taki sposób, aby psy z różnymi temperamentami mogły ze spokojem wymijać się bez przymusowego kontaktu."
     }
   },
   "schedule": {
@@ -58,6 +75,10 @@
   },
   "gallery": {
     "title": "Galeria"
+  },
+  "founder": {
+    "title": "Założycielka",
+    "p1": "Agnieszka Kałek to serce i twórczyni DOG TOK - Szkoleniowy Raj. Zbudowała ten ośrodek od podstaw, tworząc miejsce, które łączy profesjonalną infrastrukturę szkoleniową z niezwykle ciepłą, rodzinną atmosferą Magicznego Lasu. Dzięki wieloletniej współpracy z czołowymi trenerami i ekspertami, Agnieszka doskonale rozumie specyfikę branży kynologicznej, dbając o bezkompromisowy komfort każdego uczestnika wydarzeń."
   },
   "footer": {
     "tagline": "Szkoleniowy Raj",

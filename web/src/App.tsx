@@ -9,9 +9,10 @@ import Header from './components/Header';
 import MenuOverlay from './components/MenuOverlay';
 import Hero from './components/Hero';
 import About from './components/About';
+import Venue from './components/Venue';
 import Events from './components/Events';
 import Schedule from './components/Schedule';
-import Gallery from './components/Gallery';
+import Founder from './components/Founder';
 import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +31,6 @@ function App() {
       smoothWheel: true,
     });
 
-    // @ts-expect-error global lenis
     window.lenis = lenis;
 
     lenis.on('scroll', ScrollTrigger.update);
@@ -46,13 +46,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // @ts-expect-error global lenis
     if (window.lenis) {
       if (isMenuOpen) {
-        // @ts-expect-error global lenis
         window.lenis.stop();
       } else {
-        // @ts-expect-error global lenis
         window.lenis.start();
       }
     }
@@ -72,12 +69,13 @@ function App() {
         closeMenu={() => setIsMenuOpen(false)} 
       />
       
-      <main>
+      <main className="main" id="main">
         <Hero isLoaded={isLoaded} />
         <About />
+        <Venue />
         <Events />
         <Schedule />
-        <Gallery />
+        <Founder />
       </main>
 
       <Footer />

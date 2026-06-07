@@ -18,6 +18,7 @@ export default function Hero({ isLoaded }: HeroProps) {
     // Initial states
     gsap.set('.hero-title .line-inner', { y: '105%' });
     gsap.set('.hero-sub .line-inner', { y: '105%' });
+    gsap.set('.hero-scroll', { y: 30 });
     
     // Parallax
     gsap.fromTo('.hero-img', 
@@ -57,8 +58,9 @@ export default function Hero({ isLoaded }: HeroProps) {
       }, 1.0)
       .to('.hero-scroll', {
         opacity: 1,
-        duration: 0.8,
-      }, 1.4);
+        y: 0,
+        duration: 1,
+      }, 1.2);
     }
   }, [isLoaded]);
 
