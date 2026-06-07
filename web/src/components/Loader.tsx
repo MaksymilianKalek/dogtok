@@ -8,10 +8,8 @@ interface LoaderProps {
 
 export default function Loader({ onComplete }: LoaderProps) {
   const loaderRef = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Mimicking window.onload + 0.5s delay + 0.5s fade out
     const tl = gsap.timeline({
       onComplete: () => {
         if (loaderRef.current) loaderRef.current.style.display = 'none';
@@ -19,8 +17,6 @@ export default function Loader({ onComplete }: LoaderProps) {
       }
     });
 
-    // The bar fill CSS animation takes 1.8s. Let's wait for window.onload.
-    // In React, we'll just use a timeout of 1.8s or wait for document ready
     const timer = setTimeout(() => {
       tl.to(loaderRef.current, {
         opacity: 0,
@@ -37,7 +33,7 @@ export default function Loader({ onComplete }: LoaderProps) {
       <div className="loader-inner">
         <span className="loader-text">DOG TOK</span>
         <div className="loader-bar">
-          <div className="loader-bar-fill" ref={barRef}></div>
+          <div className="loader-bar-fill"></div>
         </div>
       </div>
     </div>

@@ -25,11 +25,12 @@ export default function Cursor() {
 
     window.addEventListener('mousemove', onMouseMove);
 
-    gsap.ticker.add(() => {
+    const tick = () => {
       fX += (mouseX - fX) * 0.4;
       fY += (mouseY - fY) * 0.4;
       gsap.set(followerRef.current, { x: fX, y: fY });
-    });
+    };
+    gsap.ticker.add(tick);
 
     const hoverElements = document.querySelectorAll('[data-hover]');
     const onEnter = () => {
@@ -46,8 +47,8 @@ export default function Cursor() {
       el.addEventListener('mouseleave', onLeave);
     });
 
-    // Cleanup
     return () => {
+      gsap.ticker.remove(tick);
       window.removeEventListener('mousemove', onMouseMove);
       hoverElements.forEach((el) => {
         el.removeEventListener('mouseenter', onEnter);

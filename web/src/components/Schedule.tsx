@@ -1,10 +1,7 @@
 import { useState, useRef, useMemo } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface ScheduleEvent {
   date: string;
@@ -19,18 +16,19 @@ interface MonthBlock {
 
 function isPast(dateStr: string): boolean {
   const now = new Date();
+  const currentYear = now.getFullYear();
   const match = dateStr.match(/(\d{1,2})\.(\d{2})\.?$/);
   if (match) {
     const day = parseInt(match[1], 10);
     const month = parseInt(match[2], 10);
-    const end = new Date(2026, month - 1, day, 23, 59);
+    const end = new Date(currentYear, month - 1, day, 23, 59);
     return now > end;
   }
   const rangeMatch = dateStr.match(/(\d{1,2})(?:\.\d{2})?\.?-(\d{1,2})\.(\d{2})\.?$/);
   if (rangeMatch) {
     const day = parseInt(rangeMatch[2], 10);
     const month = parseInt(rangeMatch[3], 10);
-    const end = new Date(2026, month - 1, day, 23, 59);
+    const end = new Date(currentYear, month - 1, day, 23, 59);
     return now > end;
   }
   return false;
@@ -40,6 +38,8 @@ export default function Schedule() {
   const { t } = useTranslation();
   const [openMonth, setOpenMonth] = useState<number | null>(null);
   const containerRef = useRef<HTMLElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const currentYear = new Date().getFullYear();
 
   const schedule: MonthBlock[] = useMemo(() => [
     {
@@ -131,11 +131,11 @@ export default function Schedule() {
 
   useGSAP(() => {
     ScrollTrigger.create({
-      trigger: '.schedule-wrap',
+      trigger: wrapRef.current,
       start: 'top 85%',
       once: true,
       onEnter: () => {
-        document.querySelector('.schedule-wrap')?.classList.add('in-view');
+        wrapRef.current?.classList.add('in-view');
       }
     });
   }, { scope: containerRef });
@@ -146,9 +146,9 @@ export default function Schedule() {
 
   return (
     <section className="schedule" id="schedule" ref={containerRef}>
-      <div className="schedule-wrap">
+      <div className="schedule-wrap" ref={wrapRef}>
         <span className="section-tag">{t('schedule.title')}</span>
-        <span className="schedule-year">2026</span>
+        <span className="schedule-year">{currentYear}</span>
         <div className="schedule-accordion">
           {schedule.map((block, idx) => {
             const isOpen = openMonth === idx;

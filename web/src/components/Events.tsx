@@ -1,15 +1,13 @@
 import { useState, useRef, useMemo } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Events() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const containerRef = useRef<HTMLElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   const eventsData = useMemo(() => [
     { name: t('events.items.agility'), desc: t('events.descriptions.agility'), img: '/images/agility.webp' },
@@ -24,11 +22,11 @@ export default function Events() {
 
   useGSAP(() => {
     ScrollTrigger.create({
-      trigger: '.events-wrap',
+      trigger: wrapRef.current,
       start: 'top 85%',
       once: true,
       onEnter: () => {
-        document.querySelector('.events-wrap')?.classList.add('in-view');
+        wrapRef.current?.classList.add('in-view');
       }
     });
   }, { scope: containerRef });
@@ -39,7 +37,7 @@ export default function Events() {
 
   return (
     <section className="events" id="events" ref={containerRef}>
-      <div className="events-wrap">
+      <div className="events-wrap" ref={wrapRef}>
         <span className="section-tag">{t('events.title')}</span>
         <div className="events-accordion">
           {eventsData.map((event, idx) => {

@@ -1,10 +1,7 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface HeroProps {
   isLoaded: boolean;
@@ -15,12 +12,10 @@ export default function Hero({ isLoaded }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
   useGSAP(() => {
-    // Initial states
     gsap.set('.hero-title .line-inner', { y: '105%' });
     gsap.set('.hero-sub .line-inner', { y: '105%' });
     gsap.set('.hero-scroll', { y: 30, xPercent: -50 });
     
-    // Parallax
     gsap.fromTo('.hero-img', 
       { y: '0%' },
       {
@@ -62,13 +57,12 @@ export default function Hero({ isLoaded }: HeroProps) {
         duration: 1,
       }, 1.2);
     }
-  }, [isLoaded]);
+  }, { scope: containerRef, dependencies: [isLoaded] });
 
   return (
     <section className="hero" id="hero" ref={containerRef}>
       <div className="hero-bg">
         <img src="/images/edi.webp" alt="DOG TOK Szkoleniowy Raj" className="hero-img" />
-        <div className="hero-overlay"></div>
       </div>
       <div className="hero-content">
         <h1 className="hero-title">

@@ -6,14 +6,11 @@ import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import Magnetic from './Magnetic';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Footer() {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    // Entrance animations
     const entranceEls = gsap.utils.toArray(['.footer-middle']) as HTMLElement[];
     entranceEls.forEach((el) => {
       ScrollTrigger.create({
@@ -28,15 +25,18 @@ export default function Footer() {
   }, { scope: containerRef });
 
   const handleBackToTop = () => {
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { duration: 2 });
+    const win = window as unknown as { lenis?: { scrollTo(target: number, options: unknown): void } };
+    if (win.lenis) {
+      win.lenis.scrollTo(0, { duration: 1.5, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
     <footer className="footer" id="footer" ref={containerRef}>
       <div className="footer-inner">
-        <span className="section-tag" style={{ display: 'block', marginBottom: '3rem' }}>{t('menu.contact')}</span>
+        <span className="section-tag footer-section-tag">{t('menu.contact')}</span>
         <div className="footer-middle">
           <div className="footer-map">
             <iframe 
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="footer-bottom-left">
             <span>&copy; 2026 DOG TOK - {t('footer.tagline')}</span>
             <LanguageSwitcher />
           </div>

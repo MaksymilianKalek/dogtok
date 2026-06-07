@@ -1,7 +1,3 @@
-/* ========================================
-   LOADER
-   ======================================== */
-
 .loader {
   position: fixed;
   inset: 0;
@@ -48,10 +44,6 @@
     width: 100%;
   }
 }
-
-/* ========================================
-   CUSTOM CURSOR
-   ======================================== */
 
 .cursor {
   position: fixed;
@@ -107,10 +99,6 @@
     display: none !important;
   }
 }
-
-/* ========================================
-   HEADER
-   ======================================== */
 
 .header {
   position: fixed;
@@ -208,10 +196,6 @@
     display: none;
   }
 }
-
-/* ========================================
-   NAV OVERLAY
-   ======================================== */
 
 .nav-overlay {
   position: fixed;
@@ -321,6 +305,12 @@
   will-change: transform, opacity;
 }
 
+.nav-overlay-bottom-left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .nav-overlay.active .nav-overlay-bottom {
   opacity: 1;
   transform: translateY(0);
@@ -403,10 +393,6 @@
   }
 }
 
-/* ========================================
-   HERO
-   ======================================== */
-
 .hero {
   position: relative;
   width: 100%;
@@ -434,7 +420,8 @@
   will-change: transform;
 }
 
-.hero-overlay {
+.hero-bg::after {
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -546,10 +533,6 @@
   }
 }
 
-/* ========================================
-   SECTION TAG (shared)
-   ======================================== */
-
 .section-tag {
   display: inline-block;
   font-family: var(--font-sans);
@@ -572,10 +555,6 @@
   height: 1px;
   background: var(--color-accent);
 }
-
-/* ========================================
-   ABOUT (Scrolltelling)
-   ======================================== */
 
 .about {
   position: relative;
@@ -620,10 +599,6 @@
     padding: 0;
   }
 }
-/* ========================================
-   VENUE
-   ======================================== */
-
 .venue {
   position: relative;
   padding: var(--space-xl) 0;
@@ -744,10 +719,6 @@
     padding: 0 1.5rem;
   }
 }
-/* ========================================
-   EVENTS
-   ======================================== */
-
 .events {
   position: relative;
   padding: var(--space-xl) 0;
@@ -873,20 +844,20 @@
   font-family: var(--font-sans);
   font-size: var(--text-fluid-xs);
   font-weight: 300;
-  line-height: 1.9; /* Bardziej zrelaksowana interlinia */
+  line-height: 1.9;
   color: var(--color-text-muted);
-  margin: 2.5rem 0 3.5rem 0; /* Marginesy dla oddechu */
+  margin: 2.5rem 0 3.5rem 0;
 }
 
 .event-img-wrap {
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin: 2.5rem 0 3.5rem 0; /* Marginesy równe tekstowi dla wyrównania */
+  margin: 2.5rem 0 3.5rem 0;
 }
 
 .event-img {
   width: 100%;
-  aspect-ratio: 4 / 3; /* Sztywny klasyczny format 4:3 */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
   transform: scale(1.04);
@@ -904,7 +875,7 @@
 
   .event-panel-inner {
     grid-template-columns: 1fr;
-    gap: 0; /* Marginesy robią za odstęp */
+    gap: 0;
   }
 
   .event-desc {
@@ -915,10 +886,6 @@
     margin: 1rem 0 2.5rem 0;
   }
 }
-
-/* ========================================
-   SCHEDULE / HARMONOGRAM
-   ======================================== */
 
 .schedule {
   position: relative;
@@ -1111,12 +1078,8 @@
   }
 }
 
-/* ========================================
-   FOUNDER
-   ======================================== */
-
 .founder {
-  padding: var(--space-xl) 0 var(--space-2xl); /* Massive margin at bottom */
+  padding: var(--space-xl) 0 var(--space-2xl);
   background: var(--color-bg);
 }
 
@@ -1150,14 +1113,14 @@
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 3/4; /* Better portrait ratio */
+  aspect-ratio: 3/4;
 }
 
 .founder-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center; /* Prevents head from being cut off */
+  object-position: top center;
   display: block;
 }
 
@@ -1170,10 +1133,6 @@
     gap: 3rem;
   }
 }
-
-/* ========================================
-   FOOTER
-   ======================================== */
 
 .footer {
   background: var(--color-bg-elevated);
@@ -1211,7 +1170,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3.5rem; /* Increased gap to accommodate larger text */
+  gap: 3.5rem;
 }
 
 .footer-label {
@@ -1221,7 +1180,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  margin-bottom: 1rem; /* More space before the giant text */
+  margin-bottom: 1rem;
 }
 
 .footer-email-link {
@@ -1263,6 +1222,12 @@
   color: var(--color-text-muted);
 }
 
+.footer-bottom-left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .footer-credit-studio {
   display: inline-block;
   color: var(--color-text);
@@ -1290,10 +1255,6 @@
     color 0.3s ease,
     background 0.3s ease;
 }
-
-/* ========================================
-   LANGUAGE SWITCHER
-   ======================================== */
 
 .lang-switcher {
   display: flex;
@@ -1339,10 +1300,6 @@
     gap: 1rem;
   }
 }
-
-/* ========================================
-   SECTION ENTRANCE ANIMATIONS (GSAP triggers)
-   ======================================== */
 
 .venue-content,
 .events-wrap,

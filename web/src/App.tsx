@@ -15,14 +15,11 @@ import Schedule from './components/Schedule';
 import Founder from './components/Founder';
 import Footer from './components/Footer';
 
-gsap.registerPlugin(ScrollTrigger);
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -31,26 +28,28 @@ function App() {
       smoothWheel: true,
     });
 
-    window.lenis = lenis;
+    (window as unknown as { lenis: unknown }).lenis = lenis;
 
     lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => {
+    const tick = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      gsap.ticker.remove(tick);
     };
   }, []);
 
   useEffect(() => {
-    if (window.lenis) {
+    const win = window as unknown as { lenis?: { start(): void; stop(): void } };
+    if (win.lenis) {
       if (isMenuOpen) {
-        window.lenis.stop();
+        win.lenis.stop();
       } else {
-        window.lenis.start();
+        win.lenis.start();
       }
     }
   }, [isMenuOpen]);

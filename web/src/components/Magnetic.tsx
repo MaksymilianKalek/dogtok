@@ -1,24 +1,21 @@
-import React, { useRef, ReactElement, useEffect, forwardRef, cloneElement } from 'react';
+import { useRef, useEffect, type ReactNode } from 'react';
 import gsap from 'gsap';
 
 interface MagneticProps {
-  children: ReactElement;
+  children: ReactNode;
   strength?: number;
 }
 
 export default function Magnetic({ children, strength = 0.3 }: MagneticProps) {
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only apply magnetic effect on devices with fine pointers (desktops/mice)
     if (!window.matchMedia('(pointer: fine)').matches) return;
-
     const element = elementRef.current;
     if (!element) return;
 
     const onMouseMove = (e: MouseEvent) => {
       const rect = element.getBoundingClientRect();
-      // Calculate mouse position relative to the center of the element
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       
@@ -39,5 +36,5 @@ export default function Magnetic({ children, strength = 0.3 }: MagneticProps) {
     };
   }, [strength]);
 
-  return cloneElement(children, { ref: elementRef });
+  return <div ref={elementRef} style={{ display: 'inline-block' }}>{children}</div>;
 }

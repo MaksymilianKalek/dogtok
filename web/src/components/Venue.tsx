@@ -1,14 +1,12 @@
 import { useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Venue() {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const venueItems = [
     { key: 'accommodation', num: '01' },
@@ -19,18 +17,18 @@ export default function Venue() {
 
   useGSAP(() => {
     ScrollTrigger.create({
-      trigger: '.venue-content',
+      trigger: contentRef.current,
       start: 'top 85%',
       once: true,
       onEnter: () => {
-        document.querySelector('.venue-content')?.classList.add('in-view');
+        contentRef.current?.classList.add('in-view');
       }
     });
   }, { scope: containerRef });
 
   return (
     <section className="venue" id="venue" ref={containerRef}>
-      <div className="venue-content">
+      <div className="venue-content" ref={contentRef}>
         <div className="venue-left">
           <span className="section-tag venue-sticky-title">{t('venue.title')}</span>
         </div>

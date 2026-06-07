@@ -5,8 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import Magnetic from './Magnetic';
 
-gsap.registerPlugin(ScrollTrigger);
-
 interface HeaderProps {
   isLoaded: boolean;
   isMenuOpen: boolean;
@@ -19,7 +17,6 @@ export default function Header({ isLoaded, isMenuOpen, toggleMenu }: HeaderProps
   const logoRef = useRef<HTMLAnchorElement>(null);
 
   useGSAP(() => {
-    // Initial state
     gsap.set(headerRef.current, { opacity: 0, y: -30 });
     gsap.set(logoRef.current, { opacity: 0, y: -20 });
     

@@ -1,10 +1,7 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const { t } = useTranslation();
@@ -12,14 +9,13 @@ export default function About() {
 
   useGSAP(() => {
     const revealLines = gsap.utils.toArray('.reveal-line') as HTMLElement[];
-
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
     
     mm.add({
       isDesktop: "(min-width: 769px)",
       isMobile: "(max-width: 768px)"
     }, (context) => {
-      let { isMobile } = context.conditions as { isMobile: boolean };
+      const { isMobile } = context.conditions as { isMobile: boolean };
       const startPos = isMobile ? 'top 55%' : 'top 65%';
       const endPos = isMobile ? 'bottom 40%' : 'bottom 35%';
       

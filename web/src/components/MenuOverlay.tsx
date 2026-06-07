@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useTranslation } from 'react-i18next';
@@ -11,8 +11,6 @@ interface MenuOverlayProps {
 
 export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
   const { t } = useTranslation();
-  const overlayRef = useRef<HTMLDivElement>(null);
-  const linksRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     if (isOpen) {
@@ -37,8 +35,9 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
     e.preventDefault();
     closeMenu();
     setTimeout(() => {
-      if (window.lenis) {
-        window.lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+      const win = window as unknown as { lenis?: { scrollTo(target: string, options: unknown): void } };
+      if (win.lenis) {
+        win.lenis.scrollTo(target, { offset: 0, duration: 1.5 });
       }
     }, 500);
   };
@@ -51,7 +50,7 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
     >
       <div className="nav-overlay-bg"></div>
       <div className="nav-overlay-inner">
-        <div className="nav-overlay-links" ref={linksRef}>
+        <div className="nav-overlay-links">
           <div className="nav-link-wrap">
             <a href="#about" className="nav-link" data-hover onClick={(e) => handleNavClick(e, '#about')}>{t('menu.about')}</a>
           </div>
@@ -72,7 +71,7 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
           </div>
         </div>
         <div className="nav-overlay-bottom">
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="nav-overlay-bottom-left">
             <LanguageSwitcher />
             <a href="mailto:dogtok.szkoleniowyraj@gmail.com" className="nav-email" data-hover>dogtok.szkoleniowyraj@gmail.com</a>
           </div>
