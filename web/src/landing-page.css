@@ -349,7 +349,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -514,7 +514,7 @@
 
 .about {
     position: relative;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     background: var(--color-bg);
@@ -531,8 +531,8 @@
 .about-text {
     display: flex;
     flex-direction: column;
-    gap: 15vh;
-    padding: 15vh 0;
+    gap: 10rem;
+    padding: 10rem 0;
 }
 
 .reveal-line {
@@ -1204,11 +1204,20 @@
     .footer-nav {
         text-align: left;
         flex-direction: row;
-        gap: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     .footer-middle {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .footer-bottom > div {
+        flex-wrap: wrap;
     }
 }
 

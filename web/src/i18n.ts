@@ -21,8 +21,12 @@ i18n
     resources,
     fallbackLng: 'pl',
     debug: false,
+    detection: {
+      order: ['localStorage'],
+      caches: ['localStorage'],
+    },
     interpolation: {
-      escapeValue: false, // React already safe from XSS
+      escapeValue: false,
     },
   });
 
