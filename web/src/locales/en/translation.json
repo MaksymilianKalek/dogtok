@@ -2,12 +2,12 @@
   "menu": {
     "menu": "Menu",
     "close": "Close",
-    "about": "About",
+    "about": "About Us",
     "venue": "The Venue",
     "events": "Events",
     "schedule": "Schedule",
     "gallery": "Gallery",
-    "founder": "Founder",
+    "founder": "The Founder",
     "contact": "Contact"
   },
   "hero": {
@@ -16,24 +16,24 @@
   },
   "about": {
     "title": "About Us",
-    "p1": "Training Paradise in the Magic Forest. A unique space created for workshops, seminars, and camps for dogs and their handlers.",
-    "p2": "We offer 3.5 hectares of fully fenced area: vast meadows, a private pond, comfortable summer houses, and a modern training hall.",
-    "p3": "A place designed by dog lovers for dog lovers. An ideal environment to disconnect from everyday life and fully focus on development.",
-    "p4": "A professional training ground (2500 m²), full sanitary facilities, a kitchenette, and comfortable accommodation await you here. You dedicate your time to your passion – we take care of the rest."
+    "p1": "Szkoleniowy Raj in the Magical Forest. A unique space designed for workshops, seminars, and camps for dogs and their handlers.",
+    "p2": "We offer 3.5 hectares of fully fenced grounds: vast meadows, a private pond, comfortable cabins, and a modern training hall.",
+    "p3": "A place designed by dog lovers, for dog lovers. The perfect environment to disconnect from everyday life and fully focus on development.",
+    "p4": "A professional training ground (2500 m²), comprehensive sanitary facilities, a kitchenette, and comfortable accommodation await you. You dedicate your time to your passion – we take care of the rest."
   },
   "venue": {
     "title": "The Venue",
     "items": {
       "accommodation": "Accommodation",
       "pool": "Dog Relaxation Zone",
-      "food": "Culinary & Dining",
-      "infrastructure": "Safe Space"
+      "food": "Catering & Dining",
+      "infrastructure": "Secure Environment"
     },
     "descriptions": {
-      "accommodation": "We offer 20 beds in comfortable, 100% dog-friendly cabins. Each has a lockable veranda, and we've placed convenient sanitary stations around the resort to make cleanliness completely hassle-free.",
-      "pool": "The Training Paradise features a private swimming pool for dogs. It's a dream zone for regeneration and cooling down after intense training sessions on warmer days.",
-      "food": "A spacious, fully equipped kitchenette is at your disposal. There's also the option to order full board, allowing you to save time and focus solely on relaxing.",
-      "infrastructure": "The entire resort is a tightly fenced zone with free, internal guest parking. We guarantee complete freedom for dogs, safety, and a total lack of urban distractions."
+      "accommodation": "We offer 20 beds in comfortable, 100% dog-friendly cabins. Each features an enclosed porch. We have also placed convenient waste stations with bags throughout the facility to make cleanliness completely effortless.",
+      "pool": "Szkoleniowy Raj features a private dog pool. It is a dream zone for regeneration and cooling down after intense training sessions on warmer days.",
+      "food": "A fully equipped kitchenette is at your disposal. You can also opt for full board catering (including vegetarian options), allowing you to save time and focus solely on your training.",
+      "infrastructure": "The entire facility is a tightly fenced area with free, internal parking for guests. We guarantee complete freedom for the dogs, safety, and a total absence of urban distractions."
     }
   },
   "events": {
@@ -49,14 +49,14 @@
       "communication": "Communication Classes"
     },
     "descriptions": {
-      "agility": "A full-size course compliant with the latest FCI guidelines. 25 professional obstacles – jumps, dogwalks, and tunnels – ready for safe and dynamic training at the highest level.",
-      "motivation": "Train comfortably regardless of the weather. We offer an illuminated outdoor area and an air-conditioned, heated hall with a projector, lined with dog-friendly artificial grass.",
-      "dummy": "A vast, varied, and 100% fenced area providing a dream setting, free from urban distractions, to build motivation and perfect retrieval.",
-      "frisbee": "A massive, flat space ideal for any disc sport. Train dogfrisbee, freestyle, or dartbee on a safe surface with full facilities at your fingertips.",
-      "obedience": "From precision manners training to sports obedience. An ideal, isolated environment to build reliable, responsive communication with your dog.",
-      "photography": "Photography surrounded by pure nature. The Magic Forest provides a beautiful backdrop for outdoor shoots, while the fully equipped multimedia hall ensures excellent conditions for the theoretical part.",
-      "mantrailing": "Harness your dog's incredible sense of smell on highly diverse terrain. Perfect conditions for tracking workshops and building your dog's confidence.",
-      "communication": "A space designed with psychological comfort in mind. A modular system of fences and airlocks allows for safe work and stress-free passing of even the most sensitive dogs."
+      "agility": "An agility course consisting of 25 obstacles (including jumps, dog walks, and tunnels) is available on-site. For detailed specifications, please contact us via email or social media. The course complies with the latest FCI guidelines.",
+      "motivation": "Workshops led by Paula Gumińska take place on the outdoor field (with night lighting available) or, in case of bad weather, in an air-conditioned and heated hall. The hall is equipped with a projector, and its floor is covered with soft artificial grass so that dogs can work safely.",
+      "dummy": "The fenced area is perfect for training and perfecting dummy retrieving.",
+      "frisbee": "The fenced field is ideal for frisbee training. Thanks to the facility's rich equipment, you can comfortably practice other disc sports as well. Frisgility, freestyle, or dartbee – everything you need is already here.",
+      "obedience": "Precise everyday manners training and sports obedience. From basics to the advanced level – build reliable, responsive communication.",
+      "photography": "DOG TOK regularly hosts dog photographers who share their passion with others. Thanks to a hall equipped with chairs, tables, and a projector, the theoretical part can be conducted in very comfortable conditions. For the practical part, not only the training center itself but also the surrounding forest and nature are ideal.",
+      "mantrailing": "Scent trailing workshops where the dog follows the trail of a specific person. Harness their incredible nose and problem-solving abilities.",
+      "communication": "It is possible to set up an additional fence with a gate on the premises to allow safe contact for dogs participating in the event. The area was designed in such a way that dogs with different temperaments can peacefully pass each other without forced contact."
     }
   },
   "schedule": {
@@ -77,8 +77,8 @@
     "title": "Gallery"
   },
   "founder": {
-    "title": "Founder",
-    "p1": "Agnieszka Kałek is the heart and creator of DOG TOK - Training Paradise. She built this center from scratch, creating a place that combines professional training infrastructure with the incredibly warm, family atmosphere of the Magic Forest. Thanks to years of cooperation with leading trainers and experts, Agnieszka perfectly understands the specifics of the canine industry, ensuring the uncompromising comfort of every event participant."
+    "title": "The Founder",
+    "p1": "Agnieszka Kałek is the founder and the true heart of DOG TOK - Szkoleniowy Raj. With an incredible vision, she built a sanctuary from scratch, where the highest standards of professional infrastructure meet the soothing tranquility of the Magical Forest. Years of practice and close collaboration with top canine experts have allowed her to shape an uncompromising space – one where excellent training conditions seamlessly blend with the absolute comfort of every guest."
   },
   "footer": {
     "tagline": "Szkoleniowy Raj",

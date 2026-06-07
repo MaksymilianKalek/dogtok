@@ -1198,3 +1198,29 @@
 .lang-switcher:hover {
   color: var(--color-text);
 }
+
+/* ========================================
+   SECTION ENTRANCE ANIMATIONS (GSAP triggers)
+   ======================================== */
+
+.venue-content,
+.events-wrap,
+.schedule-wrap,
+.founder-content,
+.footer-middle {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+  will-change: transform, opacity;
+}
+
+.venue-content.in-view,
+.events-wrap.in-view,
+.schedule-wrap.in-view,
+.founder-content.in-view,
+.footer-middle.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
