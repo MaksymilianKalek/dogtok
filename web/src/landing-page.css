@@ -458,12 +458,17 @@
   will-change: transform;
 }
 
+.hero-title .line-wrap {
+  margin-bottom: -0.08em;
+}
+
 .hero-title .line-inner {
   font-family: var(--font-serif);
   font-size: var(--text-fluid-xxl);
   font-weight: 800;
   letter-spacing: 0.02em;
   color: var(--color-text);
+  padding-bottom: 0.08em;
 }
 
 .hero-sub {
