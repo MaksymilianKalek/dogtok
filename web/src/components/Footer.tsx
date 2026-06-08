@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <span>&copy; 2026 DOG TOK - {t('footer.tagline')}</span>
+            <span>&copy; {new Date().getFullYear()} DOG TOK - {t('footer.tagline')}</span>
             <LanguageSwitcher />
           </div>
           <span className="footer-credit">{t('footer.credit')} <Magnetic strength={0.2}><a href="https://sokolek.com" target="_blank" rel="noreferrer noopener" className="footer-credit-studio" data-hover>Sokołek Studio</a></Magnetic></span>
