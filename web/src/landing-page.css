@@ -637,6 +637,7 @@
     line-height: 0.8;
     opacity: 1;
     padding-left: 0;
+    margin-top: 3.5rem;
   }
   .venue-sticky-title::before {
     display: none;
