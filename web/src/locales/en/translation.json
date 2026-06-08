@@ -1,0 +1,89 @@
+{
+  "menu": {
+    "menu": "Menu",
+    "close": "Close",
+    "about": "About Us",
+    "venue": "The Venue",
+    "events": "Events",
+    "schedule": "Schedule",
+    "gallery": "Gallery",
+    "founder": "The Founder",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Szkoleniowy Raj",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "Szkoleniowy Raj in the Magical Forest. A unique space designed for workshops, seminars, and camps for dogs and their handlers.",
+    "p2": "We offer 3.5 hectares of fully fenced grounds: vast meadows, a private pond, comfortable cabins, and a modern training hall.",
+    "p3": "A place designed by dog lovers, for dog lovers. The perfect environment to disconnect from everyday life and fully focus on development.",
+    "p4": "A professional training ground (2500 m²), comprehensive sanitary facilities, a kitchenette, and comfortable accommodation await you. You dedicate your time to your passion - we take care of the rest."
+  },
+  "venue": {
+    "title": "The Venue",
+    "items": {
+      "accommodation": "Accommodation",
+      "pool": "Dog Relaxation Zone",
+      "food": "Catering & Dining",
+      "infrastructure": "Secure Environment"
+    },
+    "descriptions": {
+      "accommodation": "We offer 20 beds in comfortable, 100% dog-friendly cabins. Multiple feature an enclosed porch. We have also placed convenient waste stations with bags throughout the facility to make cleanliness completely effortless.",
+      "pool": "Szkoleniowy Raj features a private dog pool. It is a dream zone for regeneration and cooling down after intense training sessions on warmer days.",
+      "food": "A fully equipped kitchenette is at your disposal. You can also opt for full board catering (including vegetarian options), allowing you to save time and focus solely on your training.",
+      "infrastructure": "The entire facility is a tightly fenced area with free, internal parking for guests. We guarantee complete freedom for the dogs, safety, and a total absence of urban distractions."
+    }
+  },
+  "events": {
+    "title": "Events",
+    "items": {
+      "agility": "Agility",
+      "motivation": "Motivation",
+      "dummy": "Dummy",
+      "frisbee": "Frisbee",
+      "obedience": "Obedience",
+      "photography": "Photography",
+      "mantrailing": "Mantrailing",
+      "communication": "Communication Classes"
+    },
+    "descriptions": {
+      "agility": "An agility course consisting of 25 obstacles (including jumps, dog walks, and tunnels) is available on-site. For detailed specifications, please contact us via email or social media. The course complies with the latest FCI guidelines.",
+      "motivation": "Workshops led by Paula Gumińska take place on the outdoor field (with night lighting available) or, in case of bad weather, in an air-conditioned and heated hall. The hall is equipped with a projector, and its floor is covered with soft artificial grass so that dogs can work safely.",
+      "dummy": "The fenced area is perfect for training and perfecting dummy retrieving.",
+      "frisbee": "The fenced field is ideal for frisbee training. Thanks to the facility's rich equipment, you can comfortably practice other disc sports as well. Frisgility, freestyle, or dartbee - everything you need is already here.",
+      "obedience": "Precise everyday manners training and sports obedience. From basics to the advanced level - build reliable, responsive communication.",
+      "photography": "DOG TOK regularly hosts dog photographers who share their passion with others. Thanks to a hall equipped with chairs, tables, and a projector, the theoretical part can be conducted in very comfortable conditions. For the practical part, not only the training center itself but also the surrounding forest and nature are ideal.",
+      "mantrailing": "Scent trailing workshops where the dog follows the trail of a specific person. Harness their incredible nose and problem-solving abilities.",
+      "communication": "It is possible to set up an additional fence with a gate on the premises to allow safe contact for dogs participating in the event. The area was designed in such a way that dogs with different temperaments can peacefully pass each other without forced contact."
+    }
+  },
+  "schedule": {
+    "title": "Schedule",
+    "months": {
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November"
+    }
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "founder": {
+    "title": "The Founder",
+    "p1": "Agnieszka Kałek is the founder and the true heart of DOG TOK - Szkoleniowy Raj. With an incredible vision, she built a sanctuary from scratch, where the highest standards of professional infrastructure meet the soothing tranquility of the Magical Forest. Years of practice and close collaboration with top canine experts have allowed her to shape an uncompromising space - one where excellent training conditions seamlessly blend with the absolute comfort of every guest."
+  },
+  "footer": {
+    "tagline": "Szkoleniowy Raj",
+    "contact": "Contact",
+    "social": "Social",
+    "credit": "Designed & developed by"
+  }
+}
