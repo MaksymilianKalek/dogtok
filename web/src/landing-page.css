@@ -60,8 +60,8 @@
     height 0.3s var(--ease-out-expo),
     background 0.3s ease,
     opacity 0.3s ease;
-  backdrop-filter: invert(100%) grayscale(100%) contrast(150%);
   -webkit-backdrop-filter: invert(100%) grayscale(100%) contrast(150%);
+  backdrop-filter: invert(100%) grayscale(100%) contrast(150%);
 }
 
 .cursor-follower {
@@ -715,7 +715,8 @@
   }
   .venue-num {
     font-size: var(--text-huge-1);
-    right: -1rem;
+    right: 0;
+    padding-right: 0.1em;
   }
 }
 
