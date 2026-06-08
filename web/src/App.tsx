@@ -54,6 +54,18 @@ function App() {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (isLoaded) {
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }
+  }, [isLoaded]);
+
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      ScrollTrigger.refresh();
+    });
+  }, []);
+
   return (
     <>
       <Cursor />
@@ -70,7 +82,7 @@ function App() {
       
       <main className="main" id="main">
         <Hero isLoaded={isLoaded} />
-        <About />
+        <About isLoaded={isLoaded} />
         <Venue />
         <Events />
         <Schedule />
