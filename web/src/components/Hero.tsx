@@ -74,7 +74,6 @@ export default function Hero({ isLoaded }: HeroProps) {
         </p>
       </div>
       <div className="hero-scroll" id="heroScroll">
-        <span className="hero-scroll-text">{t('hero.scroll')}</span>
         <div className="hero-scroll-line"></div>
       </div>
     </section>
