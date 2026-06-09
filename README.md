@@ -1,3 +1,3 @@
 # DOG TOK
 
-This is a simple static landing web page created for my mums business
+This is a simple static landing web page created for DOG TOK
