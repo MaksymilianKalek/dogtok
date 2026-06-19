@@ -76,7 +76,7 @@ export default function MenuOverlay({ isOpen, closeMenu }: MenuOverlayProps) {
             <a href="mailto:dogtok.szkoleniowyraj@gmail.com" className="nav-email" data-hover>dogtok.szkoleniowyraj@gmail.com</a>
           </div>
           <div className="nav-socials">
-            <a href="https://www.instagram.com/dogtok_szkoleniowyraj/" target="_blank" rel="noreferrer noopener" data-hover>Instagram</a>
+            <a href="https://www.instagram.com/dogtok_szkoleniowyraj" target="_blank" rel="noreferrer noopener" data-hover>Instagram</a>
             <a href="https://www.facebook.com/dogtok.szkoleniowyraj" target="_blank" rel="noreferrer noopener" data-hover>Facebook</a>
             <a href="https://www.youtube.com/channel/UCbY6z6rA2Y0OLC5UipCalyw" target="_blank" rel="noreferrer noopener" data-hover>YouTube</a>
           </div>
