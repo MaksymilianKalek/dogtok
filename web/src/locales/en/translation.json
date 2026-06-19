@@ -84,5 +84,12 @@
     "contact": "Contact",
     "social": "Social",
     "credit": "Designed & developed by"
+  },
+  "cookieConsent": {
+    "label": "Privacy",
+    "heading": "Dog cookies?",
+    "description": "Will you let us use Google Analytics to understand how visitors use the site and improve DOG TOK? Analytics will only start after your consent.",
+    "accept": "Accept",
+    "reject": "Reject"
   }
 }

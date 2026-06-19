@@ -14,10 +14,13 @@ import Events from './components/Events';
 import Schedule from './components/Schedule';
 import Founder from './components/Founder';
 import Footer from './components/Footer';
+import CookieConsentBanner from './components/CookieConsentBanner';
+import { useCookieConsent } from './hooks/useCookieConsent';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { acceptConsent, consent, rejectConsent } = useCookieConsent();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -90,6 +93,10 @@ function App() {
       </main>
 
       <Footer />
+
+      {isLoaded && consent === 'pending' && (
+        <CookieConsentBanner onAccept={acceptConsent} onReject={rejectConsent} />
+      )}
     </>
   );
 }
