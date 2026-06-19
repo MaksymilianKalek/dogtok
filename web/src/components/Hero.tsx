@@ -14,7 +14,6 @@ export default function Hero({ isLoaded }: HeroProps) {
   useGSAP(() => {
     gsap.set('.hero-title .line-inner', { y: '105%' });
     gsap.set('.hero-sub .line-inner', { y: '105%' });
-    gsap.set('.hero-scroll', { y: 30, xPercent: -50 });
     
     gsap.fromTo('.hero-img', 
       { y: '0%' },
@@ -51,11 +50,6 @@ export default function Hero({ isLoaded }: HeroProps) {
         y: 0,
         duration: 1,
       }, 1.0)
-      .to('.hero-scroll', {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-      }, 1.2);
     }
   }, { scope: containerRef, dependencies: [isLoaded] });
 
@@ -72,9 +66,6 @@ export default function Hero({ isLoaded }: HeroProps) {
         <p className="hero-sub">
           <span className="line-wrap"><span className="line-inner hero-sub-text">{t('hero.tagline')}</span></span>
         </p>
-      </div>
-      <div className="hero-scroll" id="heroScroll">
-        <div className="hero-scroll-line"></div>
       </div>
     </section>
   );
