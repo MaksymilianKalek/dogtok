@@ -1,74 +1,59 @@
-import { useCallback, useEffect, useState } from 'react';
-import { denyGoogleAnalyticsConsent, startGoogleAnalytics } from '../lib/analytics';
+import { useCallback, useState } from 'react';
 
 const COOKIE_CONSENT_STORAGE_KEY = 'dogtok-cookie-consent';
 
-type CookieConsent = 'accepted' | 'pending' | 'rejected';
+type CookieNoticeState = 'dismissed' | 'pending';
 
-function readStoredConsent(): CookieConsent {
+function readStoredNoticeState(): CookieNoticeState {
   try {
-    const storedConsent = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
+    const storedNoticeState = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
 
-    if (storedConsent === 'accepted' || storedConsent === 'rejected') {
-      return storedConsent;
+    if (
+      storedNoticeState === 'dismissed' ||
+      storedNoticeState === 'accepted' ||
+      storedNoticeState === 'rejected'
+    ) {
+      return 'dismissed';
     }
   } catch (error) {
-    console.error('Failed to read cookie consent preference.', error);
+    console.error('Failed to read cookie notice preference.', error);
   }
 
   return 'pending';
 }
 
-function storeConsent(consent: Exclude<CookieConsent, 'pending'>) {
+function storeNoticeDismissal() {
   try {
-    window.localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, consent);
+    window.localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, 'dismissed');
   } catch (error) {
-    console.error('Failed to store cookie consent preference.', error);
+    console.error('Failed to store cookie notice preference.', error);
   }
 }
 
-function clearStoredConsent() {
+function clearStoredNoticeDismissal() {
   try {
     window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
   } catch (error) {
-    console.error('Failed to clear cookie consent preference.', error);
+    console.error('Failed to clear cookie notice preference.', error);
   }
 }
 
 export function useCookieConsent() {
-  const [consent, setConsent] = useState<CookieConsent>(() => readStoredConsent());
+  const [noticeState, setNoticeState] = useState<CookieNoticeState>(() => readStoredNoticeState());
 
-  useEffect(() => {
-    if (consent === 'accepted') {
-      startGoogleAnalytics();
-      return;
-    }
-
-    if (consent === 'rejected') {
-      denyGoogleAnalyticsConsent();
-    }
-  }, [consent]);
-
-  const acceptConsent = useCallback(() => {
-    storeConsent('accepted');
-    setConsent('accepted');
+  const dismissNotice = useCallback(() => {
+    storeNoticeDismissal();
+    setNoticeState('dismissed');
   }, []);
 
-  const rejectConsent = useCallback(() => {
-    storeConsent('rejected');
-    setConsent('rejected');
-  }, []);
-
-  const resetConsent = useCallback(() => {
-    clearStoredConsent();
-    denyGoogleAnalyticsConsent();
-    setConsent('pending');
+  const resetNotice = useCallback(() => {
+    clearStoredNoticeDismissal();
+    setNoticeState('pending');
   }, []);
 
   return {
-    acceptConsent,
-    consent,
-    rejectConsent,
-    resetConsent,
+    dismissNotice,
+    noticeState,
+    resetNotice,
   };
 }

@@ -4,11 +4,10 @@ import { useGSAP } from '@gsap/react';
 import { useTranslation } from 'react-i18next';
 
 interface CookieConsentBannerProps {
-  onAccept: () => void;
-  onReject: () => void;
+  onDismiss: () => void;
 }
 
-export default function CookieConsentBanner({ onAccept, onReject }: CookieConsentBannerProps) {
+export default function CookieConsentBanner({ onDismiss }: CookieConsentBannerProps) {
   const { t } = useTranslation();
   const bannerRef = useRef<HTMLElement>(null);
   const [isClosing, setIsClosing] = useState(false);
@@ -58,18 +57,10 @@ export default function CookieConsentBanner({ onAccept, onReject }: CookieConsen
           <button
             type="button"
             className="cookie-consent-button cookie-consent-button-primary"
-            onClick={() => closeWith(onAccept)}
+            onClick={() => closeWith(onDismiss)}
             data-hover
           >
-            {t('cookieConsent.accept')}
-          </button>
-          <button
-            type="button"
-            className="cookie-consent-button cookie-consent-button-secondary"
-            onClick={() => closeWith(onReject)}
-            data-hover
-          >
-            {t('cookieConsent.reject')}
+            {t('cookieConsent.dismiss')}
           </button>
         </div>
       </div>

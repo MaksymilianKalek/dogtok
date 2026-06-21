@@ -20,7 +20,7 @@ import { useCookieConsent } from './hooks/useCookieConsent';
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { acceptConsent, consent, rejectConsent } = useCookieConsent();
+  const { dismissNotice, noticeState } = useCookieConsent();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -94,8 +94,8 @@ function App() {
 
       <Footer />
 
-      {isLoaded && consent === 'pending' && (
-        <CookieConsentBanner onAccept={acceptConsent} onReject={rejectConsent} />
+      {isLoaded && noticeState === 'pending' && (
+        <CookieConsentBanner onDismiss={dismissNotice} />
       )}
     </>
   );
