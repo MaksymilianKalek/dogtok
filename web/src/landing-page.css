@@ -1237,16 +1237,15 @@
   align-items: center;
 }
 
-.footer-credit-studio {
-  display: inline-block;
-  color: var(--color-text);
-  font-family: 'Satoshi', var(--font-sans);
-  font-weight: 700;
-  transition: color 0.3s ease;
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.footer-credit-studio:hover {
-  color: var(--color-accent);
+.footer-credit-logo {
+  width: 112px;
+  height: auto;
 }
 
 .back-to-top {
